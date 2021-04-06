@@ -35,7 +35,6 @@ nav {
 .navLogo img {
   height: 40px;
   width: 40px;
-  color: black;
 }
 nav ul {
   display: flex;
@@ -140,6 +139,7 @@ nav ul li a.active {
 @keyframes remove-anim {
   to {
     top: -100%;
+    opacity: 0.75;
   }
 }
 @media screen and (max-width: 768px) {
