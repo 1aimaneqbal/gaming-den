@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 8px;
+  border: transparent;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 5rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.navLogo img {
+  height: 40px;
+  width: 40px;
+  color: black;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  padding: 0rem 0.5rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  font-size: 16px;
+  transition: 0.3s all ease;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: rgb(9, 9, 131);
+  color: white;
+}
+.startContainer {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(36, 36, 213, 1) 100%
+  );
+  animation: remove-anim 1s ease forwards 5s;
+  z-index: 3;
+}
+#startLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  animation: fill-anim 0.5s ease forwards 3.3s;
+}
+
+#startLogo path:nth-child(1) {
+  stroke-dasharray: 433px;
+  stroke-dashoffset: 433px;
+  animation: logo-anim 1s ease forwards 0.3s;
+}
+#startLogo path:nth-child(2) {
+  stroke-dasharray: 460px;
+  stroke-dashoffset: 460px;
+  animation: logo-anim 1s ease forwards 0.6s;
+}
+#startLogo path:nth-child(3) {
+  stroke-dasharray: 660px;
+  stroke-dashoffset: 660px;
+  animation: logo-anim 1s ease forwards 0.9s;
+}
+#startLogo path:nth-child(4) {
+  stroke-dasharray: 249px;
+  stroke-dashoffset: 249px;
+  animation: logo-anim 1s ease forwards 1.2s;
+}
+#startLogo path:nth-child(5) {
+  stroke-dasharray: 442px;
+  stroke-dashoffset: 442px;
+  animation: logo-anim 1s ease forwards 1.5s;
+}
+#startLogo path:nth-child(6) {
+  stroke-dasharray: 433px;
+  stroke-dashoffset: 433px;
+  animation: logo-anim 1s ease forwards 1.8s;
+}
+#startLogo path:nth-child(7) {
+  stroke-dasharray: 515px;
+  stroke-dashoffset: 515px;
+  animation: logo-anim 1s ease forwards 2.1s;
+}
+#startLogo path:nth-child(8) {
+  stroke-dasharray: 373px;
+  stroke-dashoffset: 373px;
+  animation: logo-anim 1s ease forwards 2.4s;
+}
+#startLogo path:nth-child(9) {
+  stroke-dasharray: 442px;
+  stroke-dashoffset: 442px;
+  animation: logo-anim 1s ease forwards 2.7s;
+}
+@keyframes logo-anim {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes fill-anim {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: rgba(255, 255, 255, 1);
+  }
+}
+@keyframes remove-anim {
+  to {
+    top: -100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #startLogo {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.landingpage {
+  height: 100vh;
+  width: 100%;
+  background: url("./landing-bg.png");
+  background-size: cover;
+}
+.avatar {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.avatar img {
+  height: 400px;
+  width: 400px;
+}
+.landingtext {
+  position: absolute;
+  top: 80vh;
+  width: 100%;
+}
+.landingtext h2,
+.landingtext h4 {
+  text-align: center;
+}
+.swipeup {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotateZ(45deg);
+  bottom: 40px;
+  height: 20px;
+  width: 20px;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+  animation: swipe 0.5s infinite alternate;
+}
+@keyframes swipe {
+  from {
+    bottom: 40px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
