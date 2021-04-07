@@ -60,7 +60,7 @@ nav ul li a.active {
   color: white;
 }
 .startContainer {
-  /* height: 100%; */
+  height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
@@ -156,6 +156,10 @@ nav ul li a.active {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: 0.2s;
+}
+.avatar:hover {
+  transform: translate(-50%, -50%) scale(1.05);
 }
 .avatar img {
   height: 400px;
@@ -169,6 +173,7 @@ nav ul li a.active {
 .landingtext h2,
 .landingtext h4 {
   text-align: center;
+  pointer-events: none;
 }
 .swipeup {
   position: absolute;
