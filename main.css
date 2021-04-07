@@ -53,7 +53,7 @@ nav ul li a {
 }
 nav ul li a:hover,
 nav ul li a.active {
-  background-color: rgb(9, 9, 131);
+  background-color: rgba(45, 0, 102, 1);
   color: white;
 }
 .startContainer {
@@ -64,8 +64,8 @@ nav ul li a.active {
   left: 0;
   background: linear-gradient(
     120deg,
-    rgba(9, 9, 121, 1) 0%,
-    rgba(36, 36, 213, 1) 100%
+    rgba(87, 0, 120, 1) 0%,
+    rgba(45, 0, 102, 1) 100%
   );
   animation: remove-anim 1s ease forwards 5s;
   z-index: 3;
@@ -142,15 +142,10 @@ nav ul li a.active {
     opacity: 0.75;
   }
 }
-@media screen and (max-width: 768px) {
-  #startLogo {
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
 .landingpage {
   height: 100vh;
   width: 100%;
-  background: url("./landing-bg.png");
+  background: url("./res/landing-bg.png");
   background-size: cover;
 }
 .avatar {
@@ -189,5 +184,19 @@ nav ul li a.active {
   }
   to {
     bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #startLogo {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .avatar img {
+    height: 300px;
+    width: 300px;
+  }
+  .landingtext {
+    top: 65vh;
+    padding: 0.4rem;
   }
 }
