@@ -19,13 +19,11 @@ html {
 }
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 nav {
   height: 10vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0rem 5rem;
   background-color: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(5px);
@@ -33,7 +31,14 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
+}
+.navbar {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .navLogo img {
   height: 40px;
@@ -59,8 +64,12 @@ nav ul li a.active {
   background-color: rgba(45, 0, 102, 1);
   color: white;
 }
+.mobilenav {
+  display: none;
+  pointer-events: none;
+}
 .startContainer {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   position: fixed;
   top: 0;
@@ -71,7 +80,7 @@ nav ul li a.active {
     rgba(45, 0, 102, 1) 100%
   );
   animation: remove-anim 1s ease forwards 5s;
-  z-index: 3;
+  z-index: 5;
 }
 #startLogo {
   position: absolute;
@@ -197,6 +206,8 @@ nav ul li a.active {
 .container {
   height: 100vh;
   width: 100%;
+  padding-top: 80px;
+  display: flex;
 }
 #ps {
   /* background-color: rgb(240, 248, 255); */
@@ -216,9 +227,96 @@ nav ul li a.active {
 #ns {
   background-color: rgb(255, 240, 255);
 }
+.container .textsection {
+  width: 60%;
+}
+.container .imgsection {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .imgsection img {
+  height: 450px;
+}
 @media screen and (max-width: 768px) {
   #startLogo {
     transform: translate(-50%, -50%) scale(1);
+  }
+  nav {
+    display: none;
+  }
+  .mobilenav {
+    display: block;
+    pointer-events: all;
+    height: 10vh;
+    width: 100%;
+    padding: 0rem 5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+  .mnavbar {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .mnavlogo img {
+    height: 40px;
+    width: 40px;
+  }
+  .hamburger {
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: rgba(45, 0, 102, 1);
+  }
+  .mnavlinks {
+    height: 90vh;
+    width: calc(100% + 10rem);
+    position: absolute;
+    top: 10vh;
+    left: -5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    clip-path: circle(50px at calc(100% - 5rem - 15px) -10%);
+    -webkit-clip-path: circle(50px at calc(100% - 5rem - 15px) -10%);
+    transition: all 0.5s ease-out;
+  }
+  .mnavlinks.open {
+    clip-path: circle(1000px at calc(100% - 5rem - 15px) -10%);
+    -webkit-clip-path: circle(1000px at calc(100% - 5rem - 15px) -10%);
+  }
+  .mnavlinks ul {
+    list-style: none;
+    margin-top: 20%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .mnavlinks ul li a {
+    text-decoration: none;
+    color: rgba(45, 0, 102, 1);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+  }
+  .mnavlinks ul li a.active {
+    background-color: rgba(45, 0, 102, 1);
+    color: white;
   }
   .avatar img {
     height: 300px;
@@ -227,5 +325,41 @@ nav ul li a.active {
   .landingtext {
     top: 65vh;
     padding: 0.4rem;
+  }
+  .container {
+    flex-direction: column;
+    position: relative;
+  }
+  .container .textsection {
+    width: 100%;
+    position: absolute;
+    top: 400px;
+  }
+  .container .textsection h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .container .imgsection {
+    margin-top: 50px;
+    width: 100%;
+  }
+  #ps {
+    background: none;
+    background-color: rgb(240, 248, 255);
+  }
+  #xbox {
+    background: none;
+    background-color: rgb(240, 255, 248);
+  }
+  #pc {
+    background: none;
+    background-color: rgb(255, 248, 240);
+  }
+  #ns {
+    background: none;
+    background-color: rgb(255, 240, 255);
+  }
+  .container .imgsection img {
+    height: 200px;
   }
 }

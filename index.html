@@ -9,21 +9,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <script src="app.js" defer></script>
     <title>Gaming Den</title>
 </head>
 <body>
     <nav>
-        <div class="navLogo">
-            <a href="#landingpage"><img src="./res/gamepadLogo.png" alt=""></a>
+        <div class="navbar">
+            <div class="navLogo">
+                <a href="#landingpage"><img src="./res/gamepadLogo.png" alt=""></a>
+            </div>
+            <ul>
+                <li><a href="#ps">PlayStation</a></li>
+                <li><a href="#xbox">Xbox</a></li>
+                <li><a href="#pc">PC</a></li>
+                <li><a href="#ns">Switch</a></li>
+                <li><a href="./routes/login.html" class="active">LOGIN</a></li>
+            </ul>
         </div>
-        <ul>
-            <li><a href="#ps">PlayStation</a></li>
-            <li><a href="#xbox">Xbox</a></li>
-            <li><a href="#pc">PC</a></li>
-            <li><a href="#ns">Switch</a></li>
-            <li><a href="./routes/login.html" class="active">LOGIN</a></li>
-        </ul>
     </nav>
+    <div class="mobilenav">
+        <div class="mnavbar">
+            <div class="mnavlogo">
+                <a href="#landingpage"><img src="./res/gamepadLogo.png" alt=""></a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="mnavlinks">
+                <ul>
+                    <li><a href="#ps">PlayStation</a></li>
+                    <li><a href="#xbox">Xbox</a></li>
+                    <li><a href="#pc">PC</a></li>
+                    <li><a href="#ns">Switch</a></li>
+                    <li><a href="./routes/login.html" class="active">LOGIN</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="startContainer">
         <svg version="1.1" id="startLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 800 200">
             <path stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" d="M49.478,46.579h27.211
@@ -81,10 +105,20 @@
         <a href="#ps"><div class="swipeup"></div></a>
     </div>
     <div class="container" id="ps">
-
+        <div class="textsection">
+            <h1>Sony PlayStation 5</h1>
+        </div>
+        <div class="imgsection">
+            <img src="./res/ps-img.png" alt="">
+        </div>
     </div>
     <div class="container" id="xbox">
-
+        <div class="imgsection">
+            <img src="./res/xbox-img.png" alt="">
+        </div>
+        <div class="textsection">
+            <h1>Microsoft Xbox Series X</h1>
+        </div>
     </div>
     <div class="container" id="pc">
 
