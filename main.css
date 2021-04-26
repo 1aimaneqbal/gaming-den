@@ -16,6 +16,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -37,12 +38,9 @@ body {
   border-radius: 50%;
   position: absolute;
   border: 8px solid rgb(92, 92, 92);
-  transition-duration: 3s;
-  transition-timing-function: ease-out;
   animation: cursorAnim 0.5s infinite alternate;
   pointer-events: none;
   opacity: 0.5;
-  transition-property: transform;
   z-index: 10;
 }
 @keyframes cursorAnim {
@@ -55,6 +53,7 @@ body {
 }
 .expand {
   border: 8px solid rgba(230, 36, 36, 0.8);
+  background-color: rgba(230, 36, 36, 0.8);
   animation: cursorAnimOnClick 0.5s forwards;
 }
 @keyframes cursorAnimOnClick {
@@ -201,7 +200,7 @@ nav ul li a.active {
 @keyframes remove-anim {
   to {
     top: -100%;
-    opacity: 0.75;
+    opacity: 0;
   }
 }
 .landingpage {
@@ -313,11 +312,118 @@ nav ul li a.active {
   pointer-events: none;
 }
 .container .textsection h1 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+.container .textsection .specBox {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 2rem;
+}
+.container .textsection .specBox label {
+  width: 20%;
+}
+.container .textsection .specBox .spec {
+  width: 80%;
+  height: 1rem;
+  margin-left: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.cpu-ps {
+  width: 70%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(240, 248, 255), rgba(9, 9, 131, 1));
+}
+.gpu-ps {
+  width: 49%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(240, 248, 255), rgba(9, 9, 131, 1));
+}
+.band-ps {
+  width: 96%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(240, 248, 255), rgba(9, 9, 131, 1));
+}
+.title-ps {
+  width: 74%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(240, 248, 255), rgba(9, 9, 131, 1));
+}
+.exc-ps {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(240, 248, 255), rgba(9, 9, 131, 1));
+}
+.cpu-xbox {
+  width: 78%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(240, 255, 248), rgba(9, 131, 9, 1));
+}
+.gpu-xbox {
+  width: 61%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(240, 255, 248), rgba(9, 131, 9, 1));
+}
+.band-xbox {
+  width: 84%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(240, 255, 248), rgba(9, 131, 9, 1));
+}
+.title-xbox {
+  width: 63%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(240, 255, 248), rgba(9, 131, 9, 1));
+}
+.exc-xbox {
+  width: 91%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(240, 255, 248), rgba(9, 131, 9, 1));
+}
+.cpu-pc {
+  width: 94%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(255, 248, 240), rgba(131, 9, 9, 1));
+}
+.gpu-pc {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(255, 248, 240), rgba(131, 9, 9, 1));
+}
+.band-pc {
+  width: 83%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(255, 248, 240), rgba(131, 9, 9, 1));
+}
+.title-pc {
+  width: 90%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(255, 248, 240), rgba(131, 9, 9, 1));
+}
+.exc-pc {
+  width: 70%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(255, 248, 240), rgba(131, 9, 9, 1));
 }
 .container .textsection .btn-links {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .container .textsection .btn-links a {
   text-decoration: none;
@@ -438,6 +544,9 @@ nav ul li a.active {
   #startLogo {
     transform: translate(-50%, -50%) scale(1);
   }
+  body {
+    overflow-x: unset;
+  }
   nav {
     display: none;
   }
@@ -449,6 +558,7 @@ nav ul li a.active {
     padding: 0rem 5rem;
     background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(5px);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.4);
     position: fixed;
     top: 0;
     left: 0;
@@ -525,20 +635,29 @@ nav ul li a.active {
   }
   .container {
     flex-direction: column;
-    position: relative;
   }
   .container .textsection {
     width: 100%;
     position: absolute;
-    top: 400px;
+    display: block;
+    top: 350px;
     padding: 0 1rem;
   }
   .container .textsection h1 {
     font-size: 1.6rem;
     text-align: center;
+    margin: 0;
   }
   .container .textsection h4 {
     text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .container .textsection .specBox {
+    width: 100%;
+  }
+  .container .textsection .specBox label {
+    width: 25%;
   }
   .container .imgsection {
     margin-top: 50px;
@@ -565,9 +684,6 @@ nav ul li a.active {
   }
   .container .imgsection img {
     height: 200px;
-  }
-  .container .textsection h4 {
-    font-size: 0.9rem;
   }
   .container .textsection .btn-links {
     display: flex;
