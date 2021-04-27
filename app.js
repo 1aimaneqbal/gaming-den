@@ -1,7 +1,11 @@
 const hamburger = document.querySelector(".hamburger");
+const closeham = document.querySelector(".closeham");
 const mnavlinks = document.querySelector(".mnavlinks");
 
 hamburger.addEventListener("click", () => {
+    mnavlinks.classList.toggle("open");
+});
+closeham.addEventListener("click", () => {
     mnavlinks.classList.toggle("open");
 });
 
