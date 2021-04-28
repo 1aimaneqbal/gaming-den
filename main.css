@@ -499,8 +499,8 @@ nav ul li a.active {
   top: 0;
   left: -1px;
   height: 100%;
-  width: 250px;
-  background: linear-gradient(to right, #000, rgba(0, 0, 0, 0));
+  width: 50%;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0));
   backdrop-filter: blur(1px);
 }
 .about .about-img img {
@@ -508,6 +508,7 @@ nav ul li a.active {
 }
 .about .about-text {
   height: 100%;
+  min-width: 50%;
   padding: 5rem;
   display: flex;
   flex-direction: column;
@@ -580,7 +581,7 @@ nav ul li a.active {
     transform: scale(2.5);
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   #startLogo {
     transform: translate(-50%, -50%) scale(1);
   }
@@ -674,6 +675,7 @@ nav ul li a.active {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.65rem;
     font-weight: bold;
+    font-size: 1rem;
   }
   .mnavlinks ul li .closeham:hover {
     background-color: rgba(45, 0, 102, 0.2);
@@ -779,5 +781,13 @@ nav ul li a.active {
   }
   .cursor2 {
     display: none;
+  }
+}
+@media screen and (max-height: 660px) {
+  .container .textsection {
+    top: 300px;
+  }
+  .container .textsection .btn-links {
+    padding: 0;
   }
 }
