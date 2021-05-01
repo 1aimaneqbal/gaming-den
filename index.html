@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./res/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="app.js" defer></script>
     <title>Gaming Den</title>
 </head>
@@ -23,7 +25,6 @@
                 <li><a href="#ps">PlayStation</a></li>
                 <li><a href="#xbox">Xbox</a></li>
                 <li><a href="#pc">PC</a></li>
-                <li><a href="#ns">Switch</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="./routes/login.html" class="active">LOGIN</a></li>
             </ul>
@@ -44,7 +45,6 @@
                     <li><a href="#ps">PlayStation</a></li>
                     <li><a href="#xbox">Xbox</a></li>
                     <li><a href="#pc">PC</a></li>
-                    <li><a href="#ns">Switch</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="./routes/login.html" class="active">LOGIN</a></li>
                     <li><div class="closeham"><i class="fas fa-times"></i></div></li>
@@ -140,13 +140,82 @@
                     <div class="exc-ps"></div>
                 </div>
             </div>
-            <div class="btn-links pslinks">
-                <a href="#ps">₹ 49,999</a>
-                <a href="#">Exclusive Games</a>
+            <div class="btn-links">
+                <input class="pslinks1" type="submit" value="₹ 49,999" onclick="buyNow()">
+                <input class="pslinks2" type="submit" value="Exclusive Games" onclick="openpsexc()">
             </div>
         </div>
         <div class="imgsection">
             <img src="./res/ps-img.png" alt="">
+        </div>
+        <div class="gamesection psgamesection">
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="exc-img">
+                            <img src="./res/games/ps/demon.jpg" alt="">
+                        </div>
+                        <div class="exc-text">
+                            <h3>Demon's Soul</h3>
+                            <p><span>Genre: </span>Survival</p>
+                            <input type="submit" value="Buy Now" onclick="buyNow()">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="exc-img">
+                            <img src="./res/games/ps/hogwarts.jpg" alt="">
+                        </div>
+                        <div class="exc-text">
+                            <h3>Hogwart's Legacy</h3>
+                            <p><span>Genre: </span>Survival</p>
+                            <input type="submit" value="Buy Now" onclick="buyNow()">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="exc-img">
+                            <img src="./res/games/ps/ragnarok.jpg" alt="">
+                        </div>
+                        <div class="exc-text">
+                            <h3>God of War: Ragnarok</h3>
+                            <p><span>Genre: </span>Survival</p>
+                            <input type="submit" value="Buy Now" onclick="buyNow()">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="exc-img">
+                            <img src="./res/games/ps/returnal.jpg" alt="">
+                        </div>
+                        <div class="exc-text">
+                            <h3>Returnal</h3>
+                            <p><span>Genre: </span>Survival</p>
+                            <input type="submit" value="Buy Now" onclick="buyNow()">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="exc-img">
+                            <img src="./res/games/ps/spiderman.jpg" alt="">
+                        </div>
+                        <div class="exc-text">
+                            <h3>Spiderman: Miles Morales</h3>
+                            <p><span>Genre: </span>Survival</p>
+                            <input type="submit" value="Buy Now" onclick="buyNow()">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="exc-img">
+                            <img src="./res/games/ps/turismo.jpg" alt="">
+                        </div>
+                        <div class="exc-text">
+                            <h3>Gran Turismo 7</h3>
+                            <p><span>Genre: </span>Survival</p>
+                            <input type="submit" value="Buy Now" onclick="buyNow()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="close-exc close-exc-ps">
+                <i class="fas fa-times"></i>
+            </div>
         </div>
     </div>
     <div class="container" id="xbox">
@@ -186,9 +255,88 @@
                     <div class="exc-xbox"></div>
                 </div>
             </div>
-            <div class="btn-links xboxlinks">
-                <a href="#xbox">₹ 49,999</a>
-                <a href="#">Exclusive Games</a>
+            <div class="btn-links">
+                <input class="xboxlinks1" type="submit" value="₹ 49,999" onclick="buyNow()">
+                <input class="xboxlinks2" type="submit" value="Exclusive Games" onclick="openxboxexc()">
+            </div>
+        </div>
+        <div class="gamesection xboxgamesection">
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="exc-img">
+                            <img src="./res/games/xbox/valhalla.jpg" alt="">
+                        </div>
+                        <div class="exc-text">
+                            <h3>Assassins Creed: Valhalla</h3>
+                            <p><span>Genre: </span>Survival</p>
+                            <input type="submit" value="Buy Now" onclick="buyNow()">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="exc-img">
+                            <img src="./res/games/xbox/avowed.jpg" alt="">
+                        </div>
+                        <div class="exc-text">
+                            <h3>Avowed</h3>
+                            <p><span>Genre: </span>Survival</p>
+                            <input type="submit" value="Buy Now" onclick="buyNow()">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="exc-img">
+                            <img src="./res/games/xbox/everwild.jpg" alt="">
+                        </div>
+                        <div class="exc-text">
+                            <h3>Everwild</h3>
+                            <p><span>Genre: </span>Survival</p>
+                            <input type="submit" value="Buy Now" onclick="buyNow()">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="exc-img">
+                            <img src="./res/games/xbox/fable.jpg" alt="">
+                        </div>
+                        <div class="exc-text">
+                            <h3>Fable</h3>
+                            <p><span>Genre: </span>Survival</p>
+                            <input type="submit" value="Buy Now" onclick="buyNow()">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="exc-img">
+                            <img src="./res/games/xbox/forza.jpg" alt="">
+                        </div>
+                        <div class="exc-text">
+                            <h3>Forza Motorsports</h3>
+                            <p><span>Genre: </span>Survival</p>
+                            <input type="submit" value="Buy Now" onclick="buyNow()">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="exc-img">
+                            <img src="./res/games/xbox/halo.jpg" alt="">
+                        </div>
+                        <div class="exc-text">
+                            <h3>Halo Infinite</h3>
+                            <p><span>Genre: </span>Survival</p>
+                            <input type="submit" value="Buy Now" onclick="buyNow()">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="exc-img">
+                            <img src="./res/games/xbox/state.jpg" alt="">
+                        </div>
+                        <div class="exc-text">
+                            <h3>State of Decay 3</h3>
+                            <p><span>Genre: </span>Survival</p>
+                            <input type="submit" value="Buy Now" onclick="buyNow()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="close-exc close-exc-xbox">
+                <i class="fas fa-times"></i>
             </div>
         </div>
     </div>
@@ -226,17 +374,14 @@
                     <div class="exc-pc"></div>
                 </div>
             </div>
-            <div class="btn-links pclinks">
-                <a href="#pc">₹ 64,999</a>
-                <a href="#">Exclusive Games</a>
+            <div class="btn-links">
+                <input class="pclinks1" type="submit" value="₹ 79,999" onclick="buyNow()">
+                <input class="pclinks2" type="submit" value="Exclusive Games" onclick="openpcexc()">
             </div>
         </div>
         <div class="imgsection">
             <img src="./res/pc-img.png" alt="">
         </div>
-    </div>
-    <div class="container" id="ns">
-        Maybe
     </div>
     <div class="about" id="about">
         <div class="about-img">

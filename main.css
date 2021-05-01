@@ -31,8 +31,6 @@ body {
   border: 1px solid rgb(150, 150, 150);
   pointer-events: none;
   z-index: 10;
-  transition-delay: 0.1s;
-  transition-duration: 0.3s;
   top: 0;
   right: 0;
 }
@@ -48,6 +46,7 @@ body {
   z-index: 10;
   top: 0;
   right: 0;
+  transition-property: transform;
 }
 @keyframes cursorAnim {
   from {
@@ -263,6 +262,7 @@ nav ul li a.active {
   padding-top: 10vh;
   display: flex;
   position: relative;
+  overflow: h;
 }
 #ps {
   background: url("./res/ps.png");
@@ -302,9 +302,6 @@ nav ul li a.active {
   width: 100%;
   z-index: -1;
   background-color: rgb(255, 248, 240);
-}
-#ns {
-  background-color: rgb(255, 240, 255);
 }
 .container .textsection {
   width: 60%;
@@ -429,53 +426,60 @@ nav ul li a.active {
 .container .textsection .btn-links {
   width: 100%;
   margin-top: 2rem;
-}
-.container .textsection .btn-links a {
-  text-decoration: none;
-  border-radius: 1.5rem;
-  transition: 0.2s;
   pointer-events: all;
+}
+.container .textsection .btn-links input {
+  outline: none;
+  border-radius: 1.5rem;
+  transition: 0.3s;
+  font-size: 1rem;
   cursor: none;
 }
-.pslinks a:nth-child(2) {
+.pslinks1 {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: rgba(9, 9, 131, 1);
+  border: none;
+}
+.pslinks2 {
   padding: calc(0.5rem - 2px) calc(1rem - 2px);
   color: rgba(9, 9, 131, 1);
   border: 2px solid rgba(9, 9, 131, 1);
+  background-color: transparent;
 }
-.pslinks a:nth-child(2):hover {
+.pslinks2:hover {
   color: #fff;
-  background-color: rgba(9, 9, 131, 1);
+  background: rgba(9, 9, 131, 1);
 }
-.pslinks a:nth-child(1) {
+.xboxlinks1 {
   padding: 0.5rem 1rem;
   color: #fff;
-  background-color: rgba(9, 9, 131, 1);
+  background-color: rgba(9, 131, 9, 1);
+  border: none;
 }
-.xboxlinks a:nth-child(2) {
+.xboxlinks2 {
   padding: calc(0.5rem - 2px) calc(1rem - 2px);
   color: rgba(9, 131, 9, 1);
   border: 2px solid rgba(9, 131, 9, 1);
+  background-color: transparent;
 }
-.xboxlinks a:nth-child(2):hover {
+.xboxlinks2:hover {
   color: #fff;
   background-color: rgba(9, 131, 9, 1);
 }
-.xboxlinks a:nth-child(1) {
+.pclinks1 {
   padding: 0.5rem 1rem;
   color: #fff;
-  background-color: rgba(9, 131, 9, 1);
+  background-color: rgba(131, 9, 9, 1);
+  border: none;
 }
-.pclinks a:nth-child(2) {
+.pclinks2 {
   padding: calc(0.5rem - 2px) calc(1rem - 2px);
   color: rgba(131, 9, 9, 1);
   border: 2px solid rgba(131, 9, 9, 1);
+  background-color: transparent;
 }
-.pclinks a:nth-child(2):hover {
-  color: #fff;
-  background-color: rgba(131, 9, 9, 1);
-}
-.pclinks a:nth-child(1) {
-  padding: 0.5rem 1rem;
+.pclinks2:hover {
   color: #fff;
   background-color: rgba(131, 9, 9, 1);
 }
@@ -487,6 +491,103 @@ nav ul li a.active {
 }
 .container .imgsection img {
   height: 450px;
+}
+.gamesection {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.psgamesection {
+  background-color: rgb(240, 248, 255);
+  left: -100%;
+}
+.psgamesectionopen {
+  left: 0;
+}
+.xboxgamesection {
+  background-color: rgb(240, 255, 248);
+  right: -100%;
+}
+.xboxgamesectionopen {
+  right: 0;
+}
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 350px;
+  background-color: #fff;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  filter: blur(4px);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.swiper-slide-active {
+  filter: blur(0px);
+}
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+.exc-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.exc-text {
+  padding: 0 1rem;
+}
+.exc-text p {
+  font-size: 0.8rem;
+}
+.exc-text p span {
+  font-weight: bold;
+}
+.exc-text input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0 1rem 0;
+  height: 40px;
+  color: #fff;
+}
+.psgamesection .exc-text input {
+  background-color: rgba(9, 9, 131, 1);
+}
+.xboxgamesection .exc-text input {
+  background-color: rgba(9, 131, 9, 1);
+}
+.close-exc {
+  height: 5vh;
+  width: 5vh;
+  background-color: #fff;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  right: 5vh;
+  top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: grey;
+  z-index: 4;
 }
 .about {
   height: auto;
@@ -678,9 +779,6 @@ nav ul li a.active {
     justify-content: center;
     align-items: center;
     color: rgba(45, 0, 102, 1);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.65rem;
-    font-weight: bold;
     font-size: 1rem;
   }
   .mnavlinks ul li .closeham:hover {
@@ -736,10 +834,6 @@ nav ul li a.active {
     background: url("./res/m-pc.png");
     background-size: cover;
   }
-  #ns {
-    background: none;
-    background-color: rgb(255, 240, 255);
-  }
   .container .imgsection img {
     height: 200px;
   }
@@ -791,7 +885,10 @@ nav ul li a.active {
 }
 @media screen and (max-height: 660px) {
   .container .textsection {
-    top: 300px;
+    top: 325px;
+  }
+  .container .textsection h1 {
+    font-size: 1.4rem;
   }
   .container .textsection .btn-links {
     padding: 0;
