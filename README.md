@@ -20,7 +20,7 @@ Checkout the live version [here](https://1aimaneqbal.github.io/gaming-den/).
 ### CSS props
 
 • Positions - Relative, Absolute & Fixed
-• Display - Flex, Blocks, Inline & None
+• Display - Flex, Grids, Blocks, Inline & None
 • Psuedo Elements & Classes - ::before, :valid, :focus & :hover
 • Colors
 • Background & Background-color
