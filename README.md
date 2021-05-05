@@ -2,6 +2,11 @@
 
 Checkout the live version [here](https://1aimaneqbal.github.io/gaming-den/).
 
+## Key Features
+
+• Loading Screen Animation
+• Custom Cursor
+
 ## Things that I've used while making this project
 
 ### HTML elements
@@ -40,10 +45,6 @@ Checkout the live version [here](https://1aimaneqbal.github.io/gaming-den/).
 ### JavaScript manipulations
 
 • DOM manipulations using queryselector
-
-### Library Used
-
-• Swiper.js
 
 ### Misc
 
