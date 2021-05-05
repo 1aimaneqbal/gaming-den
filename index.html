@@ -9,9 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./main.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="app.js" defer></script>
     <title>Gaming Den</title>
 </head>
@@ -148,73 +146,71 @@
         <div class="imgsection">
             <img src="./res/ps-img.png" alt="">
         </div>
-        <div class="gamesection psgamesection">
-            <div class="swiper-container mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="exc-img">
-                            <img src="./res/games/ps/demon.jpg" alt="">
-                        </div>
-                        <div class="exc-text">
-                            <h3>Demon's Soul</h3>
-                            <p><span>Genre: </span>Survival</p>
-                            <input type="submit" value="Buy Now" onclick="buyNow()">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="exc-img">
-                            <img src="./res/games/ps/hogwarts.jpg" alt="">
-                        </div>
-                        <div class="exc-text">
-                            <h3>Hogwart's Legacy</h3>
-                            <p><span>Genre: </span>Survival</p>
-                            <input type="submit" value="Buy Now" onclick="buyNow()">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="exc-img">
-                            <img src="./res/games/ps/ragnarok.jpg" alt="">
-                        </div>
-                        <div class="exc-text">
-                            <h3>God of War: Ragnarok</h3>
-                            <p><span>Genre: </span>Survival</p>
-                            <input type="submit" value="Buy Now" onclick="buyNow()">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="exc-img">
-                            <img src="./res/games/ps/returnal.jpg" alt="">
-                        </div>
-                        <div class="exc-text">
-                            <h3>Returnal</h3>
-                            <p><span>Genre: </span>Survival</p>
-                            <input type="submit" value="Buy Now" onclick="buyNow()">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="exc-img">
-                            <img src="./res/games/ps/spiderman.jpg" alt="">
-                        </div>
-                        <div class="exc-text">
-                            <h3>Spiderman: Miles Morales</h3>
-                            <p><span>Genre: </span>Survival</p>
-                            <input type="submit" value="Buy Now" onclick="buyNow()">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="exc-img">
-                            <img src="./res/games/ps/turismo.jpg" alt="">
-                        </div>
-                        <div class="exc-text">
-                            <h3>Gran Turismo 7</h3>
-                            <p><span>Genre: </span>Survival</p>
-                            <input type="submit" value="Buy Now" onclick="buyNow()">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="gridlayout psgamesection">
             <div class="close-exc close-exc-ps">
                 <i class="fas fa-times"></i>
+            </div>
+            <div class="gamesgrid">
+                <div class="game">
+                    <div class="game-img">
+                        <img src="./res/games/ps/demon.jpg" alt="">
+                    </div>
+                    <div class="game-text">
+                        <h3>Demons Soul</h3>
+                        <p><span>Genre: </span>Action, Dungeon Crawl</p>
+                        <input type="submit" value="Buy Now" onclick="buyNow()">
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <img src="./res/games/ps/hogwarts.jpg" alt="">
+                    </div>
+                    <div class="game-text">
+                        <h3>Hogwarts Legacy</h3>
+                        <p><span>Genre: </span>Action, Adventure</p>
+                        <input type="submit" value="Buy Now" onclick="buyNow()">
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <img src="./res/games/ps/ragnarok.jpg" alt="">
+                    </div>
+                    <div class="game-text">
+                        <h3>God of War: Ragnarok</h3>
+                        <p><span>Genre: </span>Action, Mythological</p>
+                        <input type="submit" value="Buy Now" onclick="buyNow()">
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <img src="./res/games/ps/returnal.jpg" alt="">
+                    </div>
+                    <div class="game-text">
+                        <h3>Returnal</h3>
+                        <p><span>Genre: </span>Horror, Adventure, Third Person Shooter</p>
+                        <input type="submit" value="Buy Now" onclick="buyNow()">
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <img src="./res/games/ps/spiderman.jpg" alt="">
+                    </div>
+                    <div class="game-text">
+                        <h3>Spiderman: Miles Morales</h3>
+                        <p><span>Genre: </span>SciFi, Adventure</p>
+                        <input type="submit" value="Buy Now" onclick="buyNow()">
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <img src="./res/games/ps/turismo.jpg" alt="">
+                    </div>
+                    <div class="game-text">
+                        <h3>Gran Turismo 7</h3>
+                        <p><span>Genre: </span>eSports, Simulation</p>
+                        <input type="submit" value="Buy Now" onclick="buyNow()">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -260,83 +256,81 @@
                 <input class="xboxlinks2" type="submit" value="Exclusive Games" onclick="openxboxexc()">
             </div>
         </div>
-        <div class="gamesection xboxgamesection">
-            <div class="swiper-container mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="exc-img">
-                            <img src="./res/games/xbox/valhalla.jpg" alt="">
-                        </div>
-                        <div class="exc-text">
-                            <h3>Assassins Creed: Valhalla</h3>
-                            <p><span>Genre: </span>Survival</p>
-                            <input type="submit" value="Buy Now" onclick="buyNow()">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="exc-img">
-                            <img src="./res/games/xbox/avowed.jpg" alt="">
-                        </div>
-                        <div class="exc-text">
-                            <h3>Avowed</h3>
-                            <p><span>Genre: </span>Survival</p>
-                            <input type="submit" value="Buy Now" onclick="buyNow()">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="exc-img">
-                            <img src="./res/games/xbox/everwild.jpg" alt="">
-                        </div>
-                        <div class="exc-text">
-                            <h3>Everwild</h3>
-                            <p><span>Genre: </span>Survival</p>
-                            <input type="submit" value="Buy Now" onclick="buyNow()">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="exc-img">
-                            <img src="./res/games/xbox/fable.jpg" alt="">
-                        </div>
-                        <div class="exc-text">
-                            <h3>Fable</h3>
-                            <p><span>Genre: </span>Survival</p>
-                            <input type="submit" value="Buy Now" onclick="buyNow()">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="exc-img">
-                            <img src="./res/games/xbox/forza.jpg" alt="">
-                        </div>
-                        <div class="exc-text">
-                            <h3>Forza Motorsports</h3>
-                            <p><span>Genre: </span>Survival</p>
-                            <input type="submit" value="Buy Now" onclick="buyNow()">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="exc-img">
-                            <img src="./res/games/xbox/halo.jpg" alt="">
-                        </div>
-                        <div class="exc-text">
-                            <h3>Halo Infinite</h3>
-                            <p><span>Genre: </span>Survival</p>
-                            <input type="submit" value="Buy Now" onclick="buyNow()">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="exc-img">
-                            <img src="./res/games/xbox/state.jpg" alt="">
-                        </div>
-                        <div class="exc-text">
-                            <h3>State of Decay 3</h3>
-                            <p><span>Genre: </span>Survival</p>
-                            <input type="submit" value="Buy Now" onclick="buyNow()">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="gridlayout xboxgamesection">
             <div class="close-exc close-exc-xbox">
                 <i class="fas fa-times"></i>
+            </div>
+            <div class="gamesgrid">
+                <div class="game">
+                    <div class="game-img">
+                        <img src="./res/games/xbox/valhalla.jpg" alt="">
+                    </div>
+                    <div class="game-text">
+                        <h3>Assassins Creed: Valhalla</h3>
+                        <p><span>Genre: </span>Action, Adventure, Role Playing</p>
+                        <input type="submit" value="Buy Now" onclick="buyNow()">
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <img src="./res/games/xbox/avowed.jpg" alt="">
+                    </div>
+                    <div class="game-text">
+                        <h3>Avowed</h3>
+                        <p><span>Genre: </span>Role Playing</p>
+                        <input type="submit" value="Buy Now" onclick="buyNow()">
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <img src="./res/games/xbox/everwild.jpg" alt="">
+                    </div>
+                    <div class="game-text">
+                        <h3>Everwild</h3>
+                        <p><span>Genre: </span>Adventure</p>
+                        <input type="submit" value="Buy Now" onclick="buyNow()">
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <img src="./res/games/xbox/fable.jpg" alt="">
+                    </div>
+                    <div class="game-text">
+                        <h3>Fable</h3>
+                        <p><span>Genre: </span>Action, Adventure</p>
+                        <input type="submit" value="Buy Now" onclick="buyNow()">
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <img src="./res/games/xbox/forza.jpg" alt="">
+                    </div>
+                    <div class="game-text">
+                        <h3>Forza Motorsports</h3>
+                        <p><span>Genre: </span>eSports, Simulation</p>
+                        <input type="submit" value="Buy Now" onclick="buyNow()">
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <img src="./res/games/xbox/halo.jpg" alt="">
+                    </div>
+                    <div class="game-text">
+                        <h3>Halo Infinite</h3>
+                        <p><span>Genre: </span>Adventure, Third Person Shooter</p>
+                        <input type="submit" value="Buy Now" onclick="buyNow()">
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="game-img">
+                        <img src="./res/games/xbox/state.jpg" alt="">
+                    </div>
+                    <div class="game-text">
+                        <h3>State of Decay 3</h3>
+                        <p><span>Genre: </span>Survival, Horror, Third Person Shooter</p>
+                        <input type="submit" value="Buy Now" onclick="buyNow()">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -382,7 +376,7 @@
         <div class="imgsection">
             <img src="./res/pc-img.png" alt="">
         </div>
-        <div class="gridlayout">
+        <div class="gridlayout pcgamesection">
             <div class="close-exc close-exc-pc">
                 <i class="fas fa-times"></i>
             </div>

@@ -29,21 +29,6 @@ document.addEventListener("click", () => {
     }, 500);
 });
 
-var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        modifier: 2,
-        slideShadows: true,
-    },
-    loop: true,
-});
-
 const closeexcps = document.querySelector(".close-exc-ps");
 const psgamesection = document.querySelector(".psgamesection");
 const openpsexc = () => {
@@ -51,6 +36,7 @@ const openpsexc = () => {
 }
 closeexcps.addEventListener("click", () =>{
     psgamesection.classList.toggle("psgamesectionopen");
+    console.log("dafuq?")
 })
 
 const closeexcxbox = document.querySelector(".close-exc-xbox");
@@ -61,17 +47,14 @@ const openxboxexc = () => {
 closeexcxbox.addEventListener("click", () =>{
     xboxgamesection.classList.toggle("xboxgamesectionopen");
 })
-closeexcps.addEventListener("click", () =>{
-    psgamesection.classList.toggle("psgamesectionopen");
-})
 
 const closeexcpc = document.querySelector(".close-exc-pc");
-const gridlayout = document.querySelector(".gridlayout");
+const pcgamesection = document.querySelector(".pcgamesection");
 const openpcexc = () => {
-    gridlayout.classList.toggle("gridlayoutopen");
+    pcgamesection.classList.toggle("pcgamesectionopen");
 }
 closeexcpc.addEventListener("click", () =>{
-    gridlayout.classList.toggle("gridlayoutopen");
+    pcgamesection.classList.toggle("pcgamesectionopen");
 })
 
 const buyNow = () => {
