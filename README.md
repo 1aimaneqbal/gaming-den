@@ -44,7 +44,9 @@ Checkout the live version [here](https://1aimaneqbal.github.io/gaming-den/).
 
 ### JavaScript manipulations
 
-• DOM manipulations using queryselector
+• DOM manipulations using `document.queryselector`
+• Browser manipulations using `window.alert`
+• Events Listners - Mousemove & Scroll
 
 ### Misc
 
