@@ -122,7 +122,7 @@ nav ul li a.active {
   pointer-events: none;
 }
 .startContainer {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   position: fixed;
   top: 0;
@@ -262,7 +262,7 @@ nav ul li a.active {
   padding-top: 10vh;
   display: flex;
   position: relative;
-  overflow: h;
+  overflow: hidden;
 }
 #ps {
   background: url("./res/ps.png");
@@ -573,6 +573,70 @@ nav ul li a.active {
 .xboxgamesection .exc-text input {
   background-color: rgba(9, 131, 9, 1);
 }
+.gridlayout {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 3;
+  transition: 0.3s;
+  background-color: #fff;
+}
+.gridlayoutopen {
+  left: 0;
+}
+.gamesgrid {
+  position: relative;
+  padding: 0 0.5rem;
+  top: 15vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 0.5rem;
+  height: 85vh;
+  width: 1100px;
+  overflow: scroll;
+  z-index: 4;
+}
+.game {
+  padding: 1rem 0 0 0;
+  width: 350px;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: #fff;
+}
+.game:hover {
+  transform: scale(1.02);
+}
+.game-img {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+.game-text {
+  padding: 0 1rem;
+}
+.game-text p {
+  font-size: 0.8rem;
+}
+.game-text p span {
+  font-weight: bold;
+}
+.game-text input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0 1rem 0;
+  height: 40px;
+  color: #fff;
+}
+.game-text input {
+  background-color: rgba(131, 9, 9, 1);
+}
 .close-exc {
   height: 5vh;
   width: 5vh;
@@ -686,6 +750,11 @@ nav ul li a.active {
   }
   100% {
     transform: scale(2.5);
+  }
+}
+@media screen and (max-width: 999px) {
+  .gamesgrid {
+    grid-template-columns: repeat(2, auto);
   }
 }
 @media screen and (max-width: 767px) {
@@ -841,6 +910,9 @@ nav ul li a.active {
     display: flex;
     justify-content: space-around;
     padding: 0 2rem;
+  }
+  .gamesgrid {
+    grid-template-columns: repeat(1, auto);
   }
   .about {
     flex-direction: column;
