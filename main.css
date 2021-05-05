@@ -581,7 +581,7 @@ nav ul li a.active {
   height: 5vh;
   width: 5vh;
   background-color: #fff;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   position: absolute;
   right: 5vh;
@@ -591,7 +591,12 @@ nav ul li a.active {
   align-items: center;
   font-size: 1.5rem;
   color: grey;
+  transition: 0.3s;
   z-index: 4;
+}
+.close-exc:hover {
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
 .about {
   height: auto;
